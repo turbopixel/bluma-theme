@@ -1,8 +1,10 @@
+<!-- tag -->
 <div class="block">
   <h1 class="title is-3"><?= $L->get("archive_tag_title") ?> &quot;<?= $url->slug() ?>&quot;</h1>
 </div>
 <br/>
 
+<!-- blog posts -->
 <?php
 if (!empty($content)) {
   foreach ($content as $page) {
@@ -43,7 +45,9 @@ if (!empty($content)) {
     <?php Theme::plugins('pageEnd'); ?>
     <br/>
   <?php } ?>
+  <!-- blog posts / end -->
 
+  <!-- pagination -->
   <?php if (Paginator::numberOfPages() > 1) { ?>
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
       <ul class="pagination-list">
@@ -56,4 +60,6 @@ if (!empty($content)) {
       </ul>
     </nav>
   <?php } ?>
+  <!-- pagination / end -->
 <?php } ?>
+<!-- tag / end -->

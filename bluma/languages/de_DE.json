@@ -3,6 +3,8 @@
     "name": "BLUMA",
     "description": "Ein auf dem Bulma CSS Framework basierendes Theme."
   },
+  "menu_start": "Startseite",
+  "menu_input_search": "Seite durchsuchen",
   "archive_tag_title": "Wort",
   "pagination_next": "Zurück",
   "pagination_previous": "Weiter"

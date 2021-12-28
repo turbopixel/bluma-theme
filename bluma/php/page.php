@@ -1,17 +1,17 @@
-<!-- page begin -->
+<!-- page -->
 <?php Theme::plugins('pageBegin'); ?>
 
 <!-- title -->
 <h1 class="title"><?= $page->title(); ?></h1>
 <h4 class="subtitle"><?= $L->get("Published") ?> <?= $page->date() ?></h4>
 
-<!-- description -->
 <?php if ($page->description()): ?>
+  <!-- description -->
   <p class="page-description"><?= $page->description(); ?></p>
 <?php endif ?>
 
-<!-- cover image -->
 <?php if ($page->coverImage()): ?>
+  <!-- cover image -->
   <div class="block">
     <figure class="image is-16by9">
       <img src="<?= $page->coverImage(); ?>" alt="">
@@ -28,11 +28,11 @@
   </div>
 </div>
 
-<!-- tags -->
 <?php
 $tags = $page->tags();
 if (!empty($tags)) {
   ?>
+  <!-- tags -->
   <div class="tags">
     <?php
     foreach (explode(",", $tags) as $item) {
@@ -46,5 +46,5 @@ if (!empty($tags)) {
 }
 ?>
 
-<!-- page end -->
 <?php Theme::plugins('pageEnd'); ?>
+<!-- page end -->

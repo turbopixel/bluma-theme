@@ -3,6 +3,8 @@
     "name": "BLUMA",
     "description": "A bulma css based theme."
   },
+  "menu_start": "Home",
+  "menu_input_search": "Search...",
   "archive_tag_title": "Tag archive",
   "pagination_next": "Next",
   "pagination_previous": "Previous"

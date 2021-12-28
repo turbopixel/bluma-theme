@@ -13,11 +13,11 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a href="/" class="navbar-item">Startseite</a>
+        <a href="/" class="navbar-item"><?= $L->get("menu_start") ?></a>
         <?php
         if (isset($staticContent) && is_array($staticContent)) {
           foreach ($staticContent as $staticPage) { ?>
-            <a class="navbar-item" href="<?= $staticPage->permalink(); ?>"><?= $staticPage->title(); ?></a>
+            <a class="navbar-item" href="<?= $staticPage->permalink(); ?>" title="<?= $staticPage->title(); ?>"><?= $staticPage->title(); ?></a>
             <?php
           }
         }
@@ -40,7 +40,7 @@
                       class="input"
                       id="search-input"
                       type="text"
-                      placeholder="Blog durchsuchen"
+                      placeholder="<?= $L->get("menu_input_search") ?>"
                       aria-label="Suche"
                       onsubmit="searchNow()"
                       style="width: 200px">

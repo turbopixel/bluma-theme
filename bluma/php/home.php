@@ -20,6 +20,7 @@
   </div>
 <?php endif ?>
 
+<!-- blog posts -->
 <?php
 if (!empty($content)) {
   foreach ($content as $page) {
@@ -60,7 +61,9 @@ if (!empty($content)) {
     <?php Theme::plugins('pageEnd'); ?>
     <br/>
   <?php } ?>
+  <!-- blog posts / end -->
 
+  <!-- pagination -->
   <?php if (Paginator::numberOfPages() > 1) { ?>
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
       <ul class="pagination-list">
@@ -73,4 +76,5 @@ if (!empty($content)) {
       </ul>
     </nav>
   <?php } ?>
+  <!-- pagination / end -->
 <?php } ?>
