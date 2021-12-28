@@ -6,7 +6,7 @@ A [bulma](https://bulma.io/) css based theme for [bludit](https://github.com/blu
 
 ## Preview
 
-![](/home/turbopixel/IntelliJ/bluma-theme/preview/bluma-theme-demo.png)
+![](bluma-theme/preview/bluma-theme-demo.png)
 
 ## Changelog
 
