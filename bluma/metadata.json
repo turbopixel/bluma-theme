@@ -1,0 +1,10 @@
+{
+	"author": "Nico Hemkes",
+	"email": "",
+	"website": "https://remux.de",
+	"version": "1.0.0-beta",
+	"releaseDate": "2021-12-26",
+	"license": "MIT",
+	"compatible": "3.13.1",
+	"notes": ""
+}
