@@ -1,5 +1,4 @@
-
-<header class="welcome bg-light">
+<header class=" bg-light">
   <div class="container text-center">
     <section class="hero is-link">
       <div class="hero-body">
@@ -21,32 +20,41 @@
   </div>
 <?php endif ?>
 
-<?php foreach ($content as $page): ?>
+<?php
+/** @var Page $page */
+foreach ($content as $page):
+  ?>
 
   <?php Theme::plugins('pageBegin'); ?>
 
   <div class="card is-shadowless" id="post-<?= $page->uuid(); ?>">
     <header class="card-header">
-      <a href="<?php echo $page->permalink(); ?>" class="card-header-title"><?php echo $page->title(); ?></a>
+      <a href="<?= $page->permalink() ?>" class="card-header-title"><?php echo $page->title(); ?></a>
     </header>
     <div class="card-content">
-      <?php if ($page->description()): ?>
+      <?php
+      if ($page->description()) {
+        ?>
         <div class="block"><em><?php echo $page->description(); ?></em></div>
-      <?php else: ?>
-        <div class="block"><?php echo $page->contentBreak(); ?></div>
-      <?php endif ?>
-
-      <div class="media">
-        <div class="media-content">
-          <small>Veröffentlicht am: <?= $page->dateRaw() ?></small>
-        </div>
-      </div>
+        <?php
+      } else {
+        $content = $page->contentBreak(false);
+        if (strlen($content) > 400) {
+          $content = strip_tags($content);
+          ?>
+          <div class="block"><?= substr($content, 0, 400) ?> [...]</div>
+          <div class="block">
+            <a href="<?= $page->permalink() ?>"><?= $L->get('Read more') ?> &raquo;</a>
+          </div>
+          <?php
+        } else {
+          ?>
+          <div class="block"><?= $content ?></div>
+          <?php
+        }
+      }
+      ?>
     </div>
-    <footer class="card-footer">
-      <?php if ($page->readMore()): ?>
-        <a href="<?php echo $page->permalink(); ?>" class="card-footer-item"><?php echo $L->get('Read more'); ?></a>
-      <?php endif ?>
-    </footer>
   </div>
 
   <?php Theme::plugins('pageEnd'); ?>
