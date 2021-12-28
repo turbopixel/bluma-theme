@@ -23,6 +23,8 @@
     // If the user is watching the frontpage the variable takes the value "home"
     if (isset($WHERE_AM_I) && $WHERE_AM_I == 'page') {
       include(THEME_DIR_PHP . 'page.php');
+    } else if (isset($WHERE_AM_I) && $WHERE_AM_I == 'tag') {
+      include(THEME_DIR_PHP . 'tag.php');
     } else {
       include(THEME_DIR_PHP . 'home.php');
     }

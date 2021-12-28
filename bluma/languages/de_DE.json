@@ -2,5 +2,8 @@
   "theme-data": {
     "name": "BLUMA",
     "description": "Ein auf dem Bulma CSS Framework basierendes Theme."
-  }
+  },
+  "archive_tag_title": "Wort",
+  "pagination_next": "Zurück",
+  "pagination_previous": "Weiter"
 }

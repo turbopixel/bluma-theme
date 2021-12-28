@@ -2,5 +2,8 @@
   "theme-data": {
     "name": "BLUMA",
     "description": "A bulma css based theme."
-  }
+  },
+  "archive_tag_title": "Tag archive",
+  "pagination_next": "Next",
+  "pagination_previous": "Previous"
 }

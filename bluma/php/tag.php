@@ -1,24 +1,7 @@
-<header class=" bg-light">
-  <div class="container text-center">
-    <section class="hero is-link">
-      <div class="hero-body">
-        <h1 class="title is-3">
-          <?= $site->slogan(); ?>
-        </h1>
-        <?php if ($site->description()): ?>
-          <h3 class="subtitle is-5"><?= $site->description(); ?></h3>
-        <?php endif ?>
-      </div>
-    </section>
-  </div>
-</header>
+<div class="block">
+  <h1 class="title is-3"><?= $L->get("archive_tag_title") ?> &quot;<?= $url->slug() ?>&quot;</h1>
+</div>
 <br/>
-
-<?php if (empty($content)): ?>
-  <div class="text-center p-4">
-    <?php $language->p('No pages found') ?>
-  </div>
-<?php endif ?>
 
 <?php
 if (!empty($content)) {
