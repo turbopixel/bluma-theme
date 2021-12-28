@@ -15,7 +15,7 @@ A [bulma](https://github.com/jgthms/bulma) css based theme for [bludit](https://
 
 **Direct download**
 
-* Download the file
+* Download the theme archive zip file
 * Upload the files into the bulma/bl-theme/ directory
 * Activate bluma in the administration area
 
