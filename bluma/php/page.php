@@ -2,19 +2,19 @@
 <?php Theme::plugins('pageBegin'); ?>
 
 <!-- title -->
-<h1 class="title"><?php echo $page->title(); ?></h1>
+<h1 class="title"><?= $page->title(); ?></h1>
 <h4 class="subtitle"><?= $L->get("Published") ?> <?= $page->date() ?></h4>
 
 <!-- description -->
 <?php if ($page->description()): ?>
-  <p class="page-description"><?php echo $page->description(); ?></p>
+  <p class="page-description"><?= $page->description(); ?></p>
 <?php endif ?>
 
 <!-- cover image -->
 <?php if ($page->coverImage()): ?>
   <div class="block">
     <figure class="image is-16by9">
-      <img src="<?php echo $page->coverImage(); ?>" alt="">
+      <img src="<?= $page->coverImage(); ?>" alt="">
     </figure>
   </div>
 <?php endif ?>
@@ -23,7 +23,7 @@
 <div class="card mb-5" id="post-<?= $page->uuid(); ?>">
   <div class="card-content">
     <div class="content">
-      <?php echo $page->content(); ?>
+      <?= $page->content(); ?>
     </div>
   </div>
 </div>

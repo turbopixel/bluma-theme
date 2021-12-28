@@ -2,7 +2,7 @@
   <div class="container is-max-desktop">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <a class="button is-link has-text-weight-bold" href="<?php echo Theme::siteUrl(); ?>"><?php echo $site->title(); ?></a>
+        <a class="button is-link has-text-weight-bold" href="<?= Theme::siteUrl(); ?>"><?= $site->title(); ?></a>
       </div>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -17,7 +17,7 @@
         <?php
         if (isset($staticContent) && is_array($staticContent)) {
           foreach ($staticContent as $staticPage) { ?>
-            <a class="navbar-item" href="<?php echo $staticPage->permalink(); ?>"><?php echo $staticPage->title(); ?></a>
+            <a class="navbar-item" href="<?= $staticPage->permalink(); ?>"><?= $staticPage->title(); ?></a>
             <?php
           }
         }
@@ -26,8 +26,8 @@
 
       <div class="navbar-end">
         <?php if (Theme::rssUrl()): ?>
-          <a class="navbar-item" href="<?php echo Theme::rssUrl() ?>" rel="nofollow">
-            <img src="<?php echo DOMAIN_THEME . 'img/rss.svg' ?>" width="28" height="28" alt="RSS"/>
+          <a class="navbar-item" href="<?= Theme::rssUrl() ?>" rel="nofollow">
+            <img src="<?= DOMAIN_THEME . 'img/rss.svg' ?>" width="28" height="28" alt="RSS"/>
           </a>
         <?php endif; ?>
 

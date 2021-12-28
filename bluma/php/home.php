@@ -3,10 +3,10 @@
     <section class="hero is-link">
       <div class="hero-body">
         <h1 class="title is-3">
-          <?php echo $site->slogan(); ?>
+          <?= $site->slogan(); ?>
         </h1>
         <?php if ($site->description()): ?>
-          <h3 class="subtitle is-5"><?php echo $site->description(); ?></h3>
+          <h3 class="subtitle is-5"><?= $site->description(); ?></h3>
         <?php endif ?>
       </div>
     </section>
@@ -29,13 +29,13 @@ foreach ($content as $page):
 
   <div class="card is-shadowless" id="post-<?= $page->uuid(); ?>">
     <header class="card-header">
-      <a href="<?= $page->permalink() ?>" class="card-header-title"><?php echo $page->title(); ?></a>
+      <a href="<?= $page->permalink() ?>" class="card-header-title"><?= $page->title(); ?></a>
     </header>
     <div class="card-content">
       <?php
       if ($page->description()) {
         ?>
-        <div class="block"><em><?php echo $page->description(); ?></em></div>
+        <div class="block"><em><?= $page->description(); ?></em></div>
         <?php
       } else {
         $content = $page->contentBreak(false);
@@ -65,10 +65,10 @@ foreach ($content as $page):
   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <ul class="pagination-list">
       <?php if (Paginator::showPrev()): ?>
-        <li><a class="pagination-previous" href="<?php echo Paginator::previousPageUrl() ?>" tabindex="-1">&laquo; Weiter</a></li>
+        <li><a class="pagination-previous" href="<?= Paginator::previousPageUrl() ?>" tabindex="-1">&laquo; Weiter</a></li>
       <?php endif; ?>
       <?php if (Paginator::showNext()): ?>
-        <li><a class="pagination-previous" href="<?php echo Paginator::nextPageUrl() ?>" tabindex="-1">Zurück &raquo;</a></li>
+        <li><a class="pagination-previous" href="<?= Paginator::nextPageUrl() ?>" tabindex="-1">Zurück &raquo;</a></li>
       <?php endif; ?>
     </ul>
   </nav>

@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <?php echo $site->footer(); ?>
+      <?= $site->footer(); ?>
     </p>
   </div>
 </footer>
